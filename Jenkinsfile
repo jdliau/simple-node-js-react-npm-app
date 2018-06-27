@@ -8,7 +8,9 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install' 
+                withEnv(['HTTP_PROXY=http://PITC-Zscaler-Global-ZEN.proxy.corporate.ge.com:80']) {
+                    sh 'npm install'
+                }
             }
         }
     }
