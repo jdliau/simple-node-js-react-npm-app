@@ -8,8 +8,6 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm config set proxy http://PITC-Zscaler-Global-ZEN.proxy.corporate.ge.com:80'
-                sh 'npm config set https-proxy http://PITC-Zscaler-Global-ZEN.proxy.corporate.ge.com:80'
                 sh 'npm install'
             }
         }
